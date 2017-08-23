@@ -17,7 +17,7 @@ var submitForm = function() {
 					content = "<ul>";
 					for (var i in returnObj) {
 						var currRepo = returnObj[i];
-						content += "<li><a href='"+currRepo.html_url+"' target='_blank'>"+currRepo.name+"</a></li>";
+						content += "<li><a class='l-d_block e-slide' href='"+currRepo.html_url+"' target='_blank'>"+currRepo.name+"</a></li>";
 					}
 					content += "</ul>";
 				}

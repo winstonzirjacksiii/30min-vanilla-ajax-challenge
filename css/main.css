@@ -5,7 +5,11 @@ body {
   font-size:16px;
 }
 
+/* --- Basic Layout --- */
 .l-text_center {text-align:center;}
+.l-text_left {text-align:left;}
+.l-text_right {text-align:right;}
+
 .l-padding {padding-top:40px;padding-bottom:40px;}
 
 .l-container {
@@ -15,6 +19,38 @@ body {
   max-width:1200px;
 }
 
+.l-d_block {display:block;}
+.l-d_inline {display:inline;}
+.l-d_inlineblock {display:inline-block;}
+
+.l-p_absolute {position:absolute;}
+.l-p_relative {position:relative;}
+.l-p_static {position:static;}
+.l-p_fixed {position:fixed;}
+
+/* --- Effects (modern) --- */
+.e-outline {position:relative;}
+.e-outline:before {
+  position:absolute;
+  display:block;
+  content:"";
+  top:0;left:0;
+  width:100%;height:100%;
+  outline:1px solid;
+  outline-color:rgba(23,86,139,0.5);
+  outline-offset:-1px;
+}
+.e-slide {
+  -webkit-transition:-webkit-transform 500ms ease-in-out;
+  transition:transform 500ms ease-in-out;
+}
+.e-slide:hover,
+.e-slide:focus {
+  -webkit-transform:translateX(20px);
+  transform:translateX(20px);
+}
+
+/* --- Modules --- */
 .m-input {
   position:relative;
   max-width:400px;
@@ -29,6 +65,12 @@ body {
   color:#fff;font-weight:bold;
   height:40px;line-height:40px;
   text-transform:uppercase;
+}
+.m-btn:hover:before {
+  outline-color:rgba(23,86,139,0);
+  outline-offset:16px;
+  -webkit-transition:all 250ms ease-in;
+  transition:all 250ms ease-in;
 }
 .m-btn_search {
   position:absolute;
@@ -45,6 +87,8 @@ body {
 }
 .m-textinput_search {padding-right:100px;}
 
+
+/* --- Responsive --- */
 @media (max-width:1200px) {
   .l-container {max-width:992px;}
 }
