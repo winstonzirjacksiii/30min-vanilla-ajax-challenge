@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Github User/Repo Lookup</title>
+    <meta name="description" content="Github User/Repo Lookup in Vanilla JS">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <!-- Main -->
+    <header class="l-text_center l-content">
+      <h1>Lookup Repos by Github Username</h1>
+    </header>
+    <section class="l-content">
+      <form onsubmit="return submitForm()" class="m-input">
+        <input type="text" id="userName" class="m-textinput m-textinput_search" placeholder="Github Username..."/>
+        <button type="submit" id="searchSubmit" class="m-btn m-btn_search">Search</button>
+      </form>
+      <div id="repoRepository" class="m-content l-padding">
+      </div>
+    </section>
+    <script src="js/main.js"></script>
+  </body>
+</html>
